@@ -9,15 +9,24 @@
 /* Begin PBXBuildFile section */
 		18286C6F290D82F8002D20EE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286C6E290D82F8002D20EE /* MainViewController.swift */; };
 		18286C72290DBED2002D20EE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 18286C71290DBED2002D20EE /* SnapKit */; };
+		18286C74290F0BFD002D20EE /* AnkaraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286C73290F0BFD002D20EE /* AnkaraViewController.swift */; };
+		18286C76290F0C1D002D20EE /* SanFranciscoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286C75290F0C1D002D20EE /* SanFranciscoViewController.swift */; };
+		18286C78290F0C2F002D20EE /* FrankfurtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286C77290F0C2F002D20EE /* FrankfurtViewController.swift */; };
+		18286C7A290F0C3C002D20EE /* ShanghaiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286C79290F0C3C002D20EE /* ShanghaiViewController.swift */; };
 		1889D394290D674500B8B3F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D393290D674500B8B3F4 /* AppDelegate.swift */; };
 		1889D396290D674500B8B3F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1889D395290D674500B8B3F4 /* SceneDelegate.swift */; };
 		1889D39E290D674500B8B3F4 /* WeatherApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1889D39C290D674500B8B3F4 /* WeatherApp.xcdatamodeld */; };
 		1889D3A0290D674700B8B3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1889D39F290D674700B8B3F4 /* Assets.xcassets */; };
 		1889D3A3290D674700B8B3F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1889D3A1290D674700B8B3F4 /* LaunchScreen.storyboard */; };
+		189D3261290FB470008C6E9E /* IstanbulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D3260290FB470008C6E9E /* IstanbulViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18286C6E290D82F8002D20EE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		18286C73290F0BFD002D20EE /* AnkaraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkaraViewController.swift; sourceTree = "<group>"; };
+		18286C75290F0C1D002D20EE /* SanFranciscoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanFranciscoViewController.swift; sourceTree = "<group>"; };
+		18286C77290F0C2F002D20EE /* FrankfurtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrankfurtViewController.swift; sourceTree = "<group>"; };
+		18286C79290F0C3C002D20EE /* ShanghaiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShanghaiViewController.swift; sourceTree = "<group>"; };
 		1889D390290D674500B8B3F4 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1889D393290D674500B8B3F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1889D395290D674500B8B3F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +34,7 @@
 		1889D39F290D674700B8B3F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1889D3A2290D674700B8B3F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1889D3A4290D674700B8B3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189D3260290FB470008C6E9E /* IstanbulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IstanbulViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				18286C6E290D82F8002D20EE /* MainViewController.swift */,
+				189D3260290FB470008C6E9E /* IstanbulViewController.swift */,
+				18286C73290F0BFD002D20EE /* AnkaraViewController.swift */,
+				18286C75290F0C1D002D20EE /* SanFranciscoViewController.swift */,
+				18286C77290F0C2F002D20EE /* FrankfurtViewController.swift */,
+				18286C79290F0C3C002D20EE /* ShanghaiViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,9 +200,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189D3261290FB470008C6E9E /* IstanbulViewController.swift in Sources */,
 				1889D39E290D674500B8B3F4 /* WeatherApp.xcdatamodeld in Sources */,
+				18286C7A290F0C3C002D20EE /* ShanghaiViewController.swift in Sources */,
+				18286C74290F0BFD002D20EE /* AnkaraViewController.swift in Sources */,
+				18286C76290F0C1D002D20EE /* SanFranciscoViewController.swift in Sources */,
 				1889D394290D674500B8B3F4 /* AppDelegate.swift in Sources */,
 				1889D396290D674500B8B3F4 /* SceneDelegate.swift in Sources */,
+				18286C78290F0C2F002D20EE /* FrankfurtViewController.swift in Sources */,
 				18286C6F290D82F8002D20EE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
