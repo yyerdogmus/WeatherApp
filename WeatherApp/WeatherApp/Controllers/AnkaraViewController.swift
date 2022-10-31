@@ -11,8 +11,8 @@ import SnapKit
 class AnkaraViewController: UIViewController {
     
     let api = "6f4cc2ce27784b97dc8e4605463f1079"
-    let lat = "41.10795624437255"
-    let lon = "29.032269082641236"
+    let lat = "39.86631711237407"
+    let lon = "32.7383838549023"
     
     let currentTemp = UILabel()
     let feelsLikeTemp = UILabel()

@@ -11,8 +11,8 @@ import SnapKit
 class SanFranciscoViewController: UIViewController {
     
     let api = "6f4cc2ce27784b97dc8e4605463f1079"
-    let lat = "41.10795624437255"
-    let lon = "29.032269082641236"
+    let lat = "37.781226210760785"
+    let lon = "-122.39339425793241"
     
     let currentTemp = UILabel()
     let feelsLikeTemp = UILabel()
