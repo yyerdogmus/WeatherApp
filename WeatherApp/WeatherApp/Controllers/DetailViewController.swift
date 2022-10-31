@@ -1,68 +1,72 @@
 //
-//  SanFranciscoViewController.swift
+//  IstanbulViewController.swift
 //  WeatherApp
 //
-//  Created by Y. Yılmaz Erdoğmuş on 30.10.2022.
+//  Created by Y. Yılmaz Erdoğmuş on 31.10.2022.
 //
 
 import UIKit
 import SnapKit
 
-class SanFranciscoViewController: UIViewController {
-    
+class DetailViewController: UIViewController {
     let currentTemp = UILabel()
     let feelsLikeTemp = UILabel()
     let humidityTemp = UILabel()
     let pressureTemp = UILabel()
-
+    var city = City()
+    var segmentedControl = UISegmentedControl()
+    var selectedCityImageName: String {
+        return "\(city.cityName!)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor(red: 0.92, green: 0.90, blue: 0.79, alpha: 1.00)
-
+        
         createSuitSegmentedControl()
-
+        
         setupUI()
     }
     
     func createSuitSegmentedControl(){
-            let items = ["Celsius", "Kelvin"]
-            let segmentedControl = UISegmentedControl(items: items)
-            segmentedControl.addTarget(self, action: #selector(suitDidChange(_:)), for: .valueChanged)
-            segmentedControl.translatesAutoresizingMaskIntoConstraints = false
-
-            view.addSubview(segmentedControl)
-
+        let items = ["Celsius", "Kelvin"]
+        segmentedControl = UISegmentedControl(items: items)
+        segmentedControl.selectedSegmentIndex = 0
+        segmentedControl.addTarget(self, action: #selector(suitDidChange(_:)), for: .valueChanged)
+        segmentedControl.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(segmentedControl)
+        
         segmentedControl.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(160)
             make.width.equalTo(144)
             make.centerX.equalToSuperview()
         }
+    }
+    
+    @objc func suitDidChange(_ segmentedControl: UISegmentedControl) {
+        switch segmentedControl.selectedSegmentIndex{
+        case 0:
+            currentTemp.text = "\(Int(Double(city.temp!)! - 272.0))"
+            feelsLikeTemp.text = "\(city.feelsLike!)"
+        case 1:
+            currentTemp.text = "\(city.temp!)"
+            feelsLikeTemp.text = "\(Int(city.feelsLike!)! + 272)"
+        default:
+            break
         }
-
-        @objc func suitDidChange(_ segmentedControl: UISegmentedControl) {
-            switch segmentedControl.selectedSegmentIndex{
-            case 0:
-                view.backgroundColor = .white
-
-            case 1:
-                view.backgroundColor = .gray
-
-            default:
-                view.backgroundColor = .yellow
-            }
-        }
+    }
     
     func  setupUI(){
         
         let titleLabel = UILabel()
         view.addSubview(titleLabel)
-        titleLabel.text = "San Francisco"
+        titleLabel.text = city.cityName
         titleLabel.textColor = UIColor(red: 0.92, green: 0.33, blue: 0.31, alpha: 1.00)
         titleLabel.font = UIFont(name: "Georgia-Bold", size: 40)!
         titleLabel.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(88)
+            make.top.equalToSuperview().offset(84)
             make.centerX.equalToSuperview()
         }
         
@@ -80,7 +84,7 @@ class SanFranciscoViewController: UIViewController {
         let refreshButton = UIButton()
         view.addSubview(refreshButton)
         refreshButton.setImage(UIImage(named: "Reload"), for: .normal)
-       // refreshButton.addTarget(self, action: #selector(refreshButtonClicked), for: .touchUpInside)
+        refreshButton.addTarget(self, action: #selector(refreshBtnTapped), for: .touchUpInside)
         refreshButton.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(100)
             make.trailing.equalToSuperview().offset(-24)
@@ -88,19 +92,19 @@ class SanFranciscoViewController: UIViewController {
             make.height.equalTo(24)
         }
         
-        let sanFranciscoImage = UIImageView()
-        view.addSubview(sanFranciscoImage)
-        sanFranciscoImage.image = UIImage(named: "SanFrancisco")
-        sanFranciscoImage.snp.makeConstraints{ make in
+        let galataImage = UIImageView()
+        view.addSubview(galataImage)
+        galataImage.contentMode = .scaleAspectFill
+        galataImage.image = UIImage(named: selectedCityImageName)
+        galataImage.snp.makeConstraints{ make in
             make.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(-92)
-            make.width.equalTo(640)
-            make.height.equalTo(420)
+            make.width.equalToSuperview()
         }
-
+        
         view.addSubview(currentTemp)
         currentTemp.textColor = UIColor(red: 0.92, green: 0.33, blue: 0.31, alpha: 1.00)
         currentTemp.font = UIFont(name: "Georgia-Bold", size: 96)!
+        currentTemp.text = "\(Int(Double(city.temp!)! - 272.0))"
         currentTemp.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(200)
             make.centerX.equalToSuperview()
@@ -119,6 +123,7 @@ class SanFranciscoViewController: UIViewController {
         view.addSubview(feelsLikeTemp)
         feelsLikeTemp.textColor = UIColor(red: 0.92, green: 0.33, blue: 0.31, alpha: 1.00)
         feelsLikeTemp.font = UIFont(name: "Georgia-Bold", size: 24)!
+        feelsLikeTemp.text = city.feelsLike
         feelsLikeTemp.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(332)
             make.trailing.equalToSuperview().offset(-80)
@@ -137,6 +142,7 @@ class SanFranciscoViewController: UIViewController {
         view.addSubview(humidityTemp)
         humidityTemp.textColor = UIColor(red: 0.92, green: 0.33, blue: 0.31, alpha: 1.00)
         humidityTemp.font = UIFont(name: "Georgia-Bold", size: 24)!
+        humidityTemp.text = city.humidity
         humidityTemp.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(360)
             make.trailing.equalToSuperview().offset(-80)
@@ -155,6 +161,7 @@ class SanFranciscoViewController: UIViewController {
         view.addSubview(pressureTemp)
         pressureTemp.textColor = UIColor(red: 0.92, green: 0.33, blue: 0.31, alpha: 1.00)
         pressureTemp.font = UIFont(name: "Georgia-Bold", size: 24)!
+        pressureTemp.text = city.pressure
         pressureTemp.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(392)
             make.trailing.equalToSuperview().offset(-72)
@@ -168,5 +175,20 @@ class SanFranciscoViewController: UIViewController {
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
         
-    }    
+    }
+    
+    @objc func refreshBtnTapped(){
+        segmentedControl.selectedSegmentIndex = 0
+        DatabaseHandler.shared.refreshButtonClicked(selectedCity: city) { city in
+            self.currentTemp.text = "\(Int(Double(city.temp!)! - 272.0))"
+            self.pressureTemp.text = city.pressure
+            self.humidityTemp.text = city.humidity
+            self.feelsLikeTemp.text = city.feelsLike
+        }
+        
+        
+    }
+    
+    
+    
 }

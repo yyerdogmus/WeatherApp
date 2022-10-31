@@ -12,11 +12,19 @@ final class City {
      var lat: String?
      var lon: String?
      var cityName: String?
+    var temp: String?
+    var feelsLike: String?
+    var humidity: String?
+    var pressure: String?
     
-    init(lat: String? = nil, lon: String? = nil, cityName: String? = nil) {
+    init(lat: String? = nil, lon: String? = nil, cityName: String? = nil, temp: String? = nil, feelsLike: String? = nil, humidity: String? = nil, pressure: String? = nil) {
         self.lat = lat
         self.lon = lon
         self.cityName = cityName
+        self.temp = temp
+        self.feelsLike = feelsLike
+        self.humidity = humidity
+        self.pressure = pressure
     }
 }
 
