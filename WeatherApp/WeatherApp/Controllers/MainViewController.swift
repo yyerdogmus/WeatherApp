@@ -118,7 +118,6 @@ class MainViewController: UIViewController {
         
     }
     
-    
     @objc func istanbulButtonClicked(){
         let rootVC = IstanbulViewController()
         let navVC = UINavigationController(rootViewController: rootVC)

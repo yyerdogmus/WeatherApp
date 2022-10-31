@@ -19,6 +19,8 @@
 		1889D3A0290D674700B8B3F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1889D39F290D674700B8B3F4 /* Assets.xcassets */; };
 		1889D3A3290D674700B8B3F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1889D3A1290D674700B8B3F4 /* LaunchScreen.storyboard */; };
 		189D3261290FB470008C6E9E /* IstanbulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D3260290FB470008C6E9E /* IstanbulViewController.swift */; };
+		18B7B290290FF8B700D145E6 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B28F290FF8B700D145E6 /* NetworkLayer.swift */; };
+		18B7B292290FF94000D145E6 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7B291290FF94000D145E6 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		1889D3A2290D674700B8B3F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1889D3A4290D674700B8B3F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189D3260290FB470008C6E9E /* IstanbulViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IstanbulViewController.swift; sourceTree = "<group>"; };
+		18B7B28F290FF8B700D145E6 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		18B7B291290FF94000D145E6 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				18286C75290F0C1D002D20EE /* SanFranciscoViewController.swift */,
 				18286C77290F0C2F002D20EE /* FrankfurtViewController.swift */,
 				18286C79290F0C3C002D20EE /* ShanghaiViewController.swift */,
+				18B7B28F290FF8B700D145E6 /* NetworkLayer.swift */,
+				18B7B291290FF94000D145E6 /* City.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,7 +213,9 @@
 				18286C76290F0C1D002D20EE /* SanFranciscoViewController.swift in Sources */,
 				1889D394290D674500B8B3F4 /* AppDelegate.swift in Sources */,
 				1889D396290D674500B8B3F4 /* SceneDelegate.swift in Sources */,
+				18B7B292290FF94000D145E6 /* City.swift in Sources */,
 				18286C78290F0C2F002D20EE /* FrankfurtViewController.swift in Sources */,
+				18B7B290290FF8B700D145E6 /* NetworkLayer.swift in Sources */,
 				18286C6F290D82F8002D20EE /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
