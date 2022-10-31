@@ -42,15 +42,15 @@ class MainViewController: UIViewController {
             make.centerX.equalToSuperview()
         }
         
-        let logoImage = UIImageView()
-        view.addSubview(logoImage)
-        logoImage.image = UIImage(named: "Logo")
-        logoImage.snp.makeConstraints{ make in
-            make.bottom.equalToSuperview().offset(-64)
-            make.width.equalTo(200)
-            make.height.equalTo(80)
-            make.centerX.equalToSuperview()
-        }
+//        let logoImage = UIImageView()
+//        view.addSubview(logoImage)
+//        logoImage.image = UIImage(named: "Logo")
+//        logoImage.snp.makeConstraints{ make in
+//            make.bottom.equalToSuperview().offset(-64)
+//            make.width.equalTo(200)
+//            make.height.equalTo(80)
+//            make.centerX.equalToSuperview()
+//        }
         
         let flowLayout = UICollectionViewFlowLayout()
               flowLayout.scrollDirection = .vertical
